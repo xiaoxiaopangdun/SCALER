@@ -40,6 +40,8 @@ current_time = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M")
 log_path = f"./results/{args.dataset}_{current_time}.log"
 if not os.path.exists("./results"):
     os.mkdir("./results")
+if not os.path.exists("./models"):
+    os.mkdir("./models")
 logger = create_logger(log_path)
 logger.info(args)
 args.gamma = 10000 * args.gamma
