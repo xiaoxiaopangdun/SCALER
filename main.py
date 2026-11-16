@@ -57,7 +57,7 @@ aucs = []
 aps = []
 pres = []
 recalls = []
-for seed in range(args.runs):
+for seed in [1, 2, 3, 4, 5]:
     logger.info(f"-----------------Seed:{seed}------------------")
     # Set the random seed
     utils.set_random_seeds(seed)
